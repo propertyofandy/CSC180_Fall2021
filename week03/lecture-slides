@@ -3,7 +3,7 @@
  */
 
 using System;
-namespace CSC205Week02
+namespace CSC190Week03
 {
     class Program
     {
