@@ -3,7 +3,7 @@
  */
 
 using System;
-namespace CSC190Week03
+namespace CSC180Week03
 {
     class Program
     {
@@ -20,6 +20,48 @@ namespace CSC190Week03
             Console.Write(hour);
             Console.Write(":");
             Console.WriteLine(minute);
+        }
+    }
+}
+
+
+
+/*
+ * Week03 lecture slides - Exercise 3.2
+ * The point of this exercise is to practice reading code and to make sure that you understand 
+ * the flow of execution through a program with multiple methods. Read the code and write down 
+ * your output, compare it to the program output when you run the code.
+ */
+
+using System;
+namespace CSC180Week03
+{
+    class Program
+    {
+        public static void Zoop()
+        {
+            Baffle();
+            Console.Write("You wugga ");
+            Baffle();
+        }
+
+        public static void Main(string[] args)
+        {
+            Console.Write("No, I ");
+            Zoop();
+            Console.Write("I ");
+            Baffle();
+        }
+
+        public static void Baffle()
+        {
+            Console.Write("wug");
+            Ping();
+        }
+
+        public static void Ping()
+        {
+            Console.WriteLine(".");
         }
     }
 }
