@@ -50,3 +50,79 @@ namespace CSC180Week04
         */
     }
 }
+
+
+
+
+using System;
+namespace CSC205Week03
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int x = 3, y = 5;
+            double p = 1.0, q = 2.0, r = 3.5;
+            Console.WriteLine(Sum(x, y));
+            Console.WriteLine(Sum(p, q));
+            Console.WriteLine(Sum(p, q, r));
+        }
+
+        public static int Sum(int a, int b)
+        {
+            int sum = a + b;
+            return sum;
+        }
+
+        public static double Sum(double a, double b)
+        {
+            double sum = a + b;
+            return sum;
+        }
+
+        public static double Sum(double a, double b, double c)
+        {
+            double sum = a + b + c;
+            return sum;
+        }
+    }
+}
+
+
+
+/*
+ * Week04 lecture slides - 5.4 Overloading
+ */
+
+using System;
+namespace CSC180Week04
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("sum of these two numbers: " + Sum(1, 2) + "\n");
+            Console.WriteLine("sum of these two numbers: " + Sum(1, 2.0) + "\n");
+            Console.WriteLine("sum of these two numbers: " + Sum(1.0, 2) + "\n");
+            Console.WriteLine("sum of these two numbers: " + Sum(1.0, 2.0) + "\n");
+        }
+
+        public static int Sum(int a, int b)
+        {
+            Console.WriteLine($"{a} is int, {b} is int");
+            return a + b;
+        }
+
+        public static double Sum(double a, int b)
+        {
+            Console.WriteLine($"{a} is double, {b} is int");
+            return a + b;
+        }
+
+        public static double Sum(double a, double b)
+        {
+            Console.WriteLine($"{a} is double, {b} is double");
+            return a + b;
+        }
+    }
+}
