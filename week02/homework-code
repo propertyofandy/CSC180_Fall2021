@@ -1,1 +1,64 @@
-to be added...
+/*
+1. Textbook Exercise 2.3 pages 21-22.
+  1) Create a new program called Time.cs. From now on, I won't remind you to start with a small, working program, but you should.
+  2) Following the example in Section 2.6, create variables named hour, minute and second, and assign them values that are roughly the current time. Use a 24-hour clock, so that at 2pm the value of hour is 14.
+  3) Make the program calculate and print the number of seconds since midnight.
+  4) Make the program calculate and print the number of seconds remaining in the day.
+  5) Make the program calculate and print the percentage of the day that has passed.
+  6) Change the values of hour, minute and second to reflect the current time (I assume that some time has elapsed), and check to make sure that the program works correctly with different values.
+*/
+
+using System;
+namespace CSC180Week02
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int hour = 12, minute = 0;
+            double second = 0; // declare second as a double type
+            double secondsSinceMidnight;
+            secondsSinceMidnight = (hour * 60 + minute) * 60.0 + second;
+            Console.WriteLine("Number of seconds since midnight: " + secondsSinceMidnight);
+            Console.WriteLine("Number of seconds remaining in the day: " + (24 * 60 * 60.0 - secondsSinceMidnight));
+            Console.WriteLine("Fraction of the day that has passed: " + secondsSinceMidnight / (24 * 60 * 60.0));
+        }
+    }
+}
+
+
+
+/*
+CSC180 Week02 Programming Assignment
+#2. Declare several variables by selecting for each one of them the most appropriate of the types: 
+  sbyte, byte, short, ushort, int, uint, long and ulong in order to assign them the following values: 
+  52,130; -115; 4825932; 97; -10000; 20000; 224; 970,700,000; 112; -44; -1,000,000; 1990;
+  123456789123456789
+https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types
+*/
+
+using System;
+namespace CSC205Week02
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ushort u1 = 52130;
+            sbyte s1 = -115;
+            uint i1 = 4825932; // or int
+            byte b1 = 97; // or sbyte
+            short s2 = -10000;
+            short u2 = 20000; // or ushort
+            byte b2 = 224;
+            int i2 = 970700000; // or uint
+            byte b3 = 112; // or sbyte
+            sbyte s3 = -44;
+            int i3 = -1000000;
+            short u3 = 1990; //or ushort
+            ulong u4 = 123456789123456789; // or long
+            Console.WriteLine($"{u1}\n{s1}\n{i1}\n{b1}\n{s2}\n{u2}\n{b2}\n{i2}\n{b3}\n{s3}\n{i3}\n{u3}\n{u4}\n");
+        }
+    }
+}
+
