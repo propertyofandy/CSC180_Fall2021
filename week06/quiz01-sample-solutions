@@ -1,1 +1,62 @@
+1. What does the following code snippet do (or what happen to x and y after the two assignment statements? Briefly explain the algorithm.
+    double x = 3.2, y = 5.8;
+    x = x + y;
+    y = x - y;
+    x = x - y;
+Answer: The above code snippet effectively swaps the values of x and y WITHOUT using a third variable
 
+
+2. Run the program step-by-step using F11 key (step into) and explain the code.
+using System;
+class CSC180Quiz
+{
+    static void printRow(int n)
+    {
+        if (n < 1)
+            return;
+        Console.Write("#");
+        printRow(n - 1);
+    }
+    static void printPattern(int n)
+    {
+        if (n < 1)
+            return;
+        printRow(n);
+        Console.WriteLine();
+        printPattern(n - 1);
+    }
+    public static void Main()
+    {
+        printPattern(5);
+    }
+}
+
+3. Describe the program below.
+using System;
+public class Program
+{
+    public static void DoSomething(string str)
+    {
+        int i = str.Length - 1;
+        while (i >= 0)
+        {
+            Console.Write($"{str[i]} ");
+            i--;
+        }
+        Console.Write("\n");
+    }
+    public static void Main()
+    {
+        DoSomething("abcba");
+    }
+}
+
+4. Extra credit
+1. A word is said to be a "doubloon" if every letter that appears in the word appears exactly twice. 
+For example, the following are all the doubloons:
+    Abba, Anna, appall, appearer, appeases, arraigning, beriberi, bilabial, boob,
+    Caucasus, coco, Dada, deed, Emmett, Hannah, horseshoer, intestines, Isis,
+    mama, Mimi, murmur, noon, Otto, papa, peep, reappear, redder, sees, Shanghaiings, Toto
+Write a method called IsDoubloon that returns true if the given word is a doubloon and false、  otherwise.
+Hints: a relatively simple but inefficient method is to use nested loops with the outer loop iterating over 、
+each letter and the inner loop scanning all the letters to count the number of appearances of a letter.
